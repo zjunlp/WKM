@@ -1,0 +1,18 @@
+{
+    "task": {
+        "task_class": "WebShopTask"
+    },
+    "env_config": {
+        "env_class": "WebShopEnv",
+        "instruction_path": "eval_agent/prompt/instructions/webshop_inst.txt",
+        "instruction_ag_path": "eval_agent/prompt/instructions/webshop_inst_ag.txt",
+        "instruction_wm_path": "eval_agent/prompt/instructions/webshop_inst_wm.txt",
+        "icl_path": "eval_agent/prompt/icl_examples/webshop_icl.json",
+        "icl_ag_path": "eval_agent/prompt/icl_examples/webshop_icl.json",
+        "icl_wm_path": "eval_agent/prompt/icl_examples/webshop_icl.json",
+        "icl_format": "conversation",
+        "max_steps": 10,
+        "is_icl": false,
+        "document_path": "../../data/retrieval/webshop_state_action_pair.json"
+    }
+}

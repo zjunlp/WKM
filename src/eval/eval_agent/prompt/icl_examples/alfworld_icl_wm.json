@@ -1,0 +1,321 @@
+[
+    {
+        "task": "pick_and_place",
+        "example": [
+            {
+                "role": "user",
+                "content": "You are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.\n\nYour task is to: put a toiletpaper in toiletpaperhanger."
+            },
+            {
+                "role": "gpt",
+                "content": "Guideline: When the task is to put a toiletpaper in toiletpaperhanger, you should first find the toiletpaper in the possible place, and go to toiletpaperhanger to put toiletpaper in/on it.The action workflow is:\n1) go to possible palce\n2) take toiletpaper from the place. 3) go to toiletpaperhanger. 4) put toiletpaper in/on toiletpaperhanger"
+            },
+            {
+                "role": "user",
+                "content": "Thought: I need to place a toilet paper roll on the toilet paper hanger. First, I should check if there's already a roll on the hanger or if it's empty.\nAction: go to toiletpaperhanger 1\nObservation: On the toiletpaperhanger 1, you see nothing."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to put a toiletpaper in toiletpaperhanger. I have checked the current location, and there is no toiletpaper present on the toiletpaperhanger 1."
+            },
+            {
+                "role": "user",
+                "content": "Thought: The toilet paper hanger is empty, so I need to find a new roll of toilet paper to put on it.\nAction: go to toilet 1\nObservation: On the toilet 1, you see a soapbottle 1, and a toiletpaper 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to put a toiletpaper in toiletpaperhanger. I have checked the toiletpaperhanger yet, and have not found a toiletpaper roll nearby. I go to the toilet to check and find there is a toilet 1 in it."
+            },
+            {
+                "role": "user",
+                "content": "Thought: I've found a toilet paper roll on the toilet. I should pick it up so I can place it on the hanger.\nAction: take toiletpaper 1 from toilet 1\nObservation: You pick up the toiletpaper 1 from the toilet 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to put a toiletpaper in toiletpaperhanger.I have checked toilet 1 and taken a toiletpaper 1 from toilet 1."
+            },
+            {
+                "role": "user",
+                "content": "Thought: Now that I have the toilet paper roll, I need to return to the toilet paper hanger to install it.\nAction: go to toiletpaperhanger 1\nObservation: On the toiletpaperhanger 1, you see nothing."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to put a toiletpaper in toiletpaperhanger. I have picked up one roll of toiletpaper 1 and plan to place it on the toiltpaperhanger 1"
+            }
+        ]
+    },
+    {
+        "task": "pick_clean_then_place",
+        "example": [
+            {
+                "role": "user",
+                "content": "You are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a cart 1, a countertop 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a handtowelholder 1, a shelf 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.\n\nYour task is to: put a clean dishsponge in drawer."
+            },
+            {
+                "role": "gpt",
+                "content": "Guideline: When trying to put a clean dishsponge in a drawer, first locate the dishsponge by checking common storage areas, then clean the dishsponge if necessary, and finally find an empty drawer to put it in. The action workflows are:\n\n1. Identify the location of the clean dishsponge by checking common areas such as the countertop, shelf, or under the sink.\n2. If the dishsponge is dirty, clean it using a suitable receptacle like the sink.\n3. Look for an empty drawer to store the dishsponge.\n4. Put the clean dishsponge in the identified empty drawer."
+            },
+            {
+                "role": "user",
+                "content": "Thought: I need to locate a clean dish sponge. The countertop is a common place where cleaning items are kept, so I should check there first.\nAction: go to countertop 1\nObservation: On the countertop 1, you see a candle 1, a cloth 2, a dishsponge 3, a soapbottle 2, and a toiletpaper 2."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to put a clean dishsponge in drawer. I have checked countertop 1, and have found a dishsponge 3 on the countertop 1."
+            },
+            {
+                "role": "user",
+                "content": "Thought: I see a dish sponge here on the countertop. I need to pick it up to complete the task.\nAction: take dishsponge 3 from countertop 1\nObservation: You pick up the dishsponge 3 from the countertop 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to put a clean dishsponge in a drawer. I have found the dishsponge 3 on the countertop 1 and picked it up."
+            },
+            {
+                "role": "user",
+                "content": "Thought: The dish sponge must be clean before I put it away. The sink is the best place to clean it.\nAction: go to sinkbasin 1\nObservation: On the sinkbasin 1, you see nothing."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to put a clean dishsponge in drawer. I have found the dishsponge 3 on countertop 1 and picked it up. Next, I plan to clean it in sinkbasin 1 before putting it in a drawer."
+            },
+            {
+                "role": "user",
+                "content": "Thought: The sink basin is empty, which is perfect for cleaning the sponge without any obstructions.\nAction: clean dishsponge 3 with sinkbasin 1\nObservation: You clean the dishsponge 3 using the sinkbasin 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to put a clean dishsponge in a drawer. I have found the dishsponge 3 on the countertop 1 and cleaned it in the sinkbasin 1."
+            },
+            {
+                "role": "user",
+                "content": "Thought: Now that the dish sponge is clean, I need to store it. Drawer 1 is a potential storage space, so I should approach it.\nAction: go to drawer 1\nObservation: The drawer 1 is closed."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to put a clean dishsponge in drawer. I have found the dishsponge 3 on the countertop 1 and cleaned it in the sinkbasin 1. I am now trying to put it in drawer 1."
+            },
+            {
+                "role": "user",
+                "content": "Thought: The drawer is closed. I need to open it to see if it's an appropriate place to store the clean dish sponge.\nAction: open drawer 1\nObservation: You open the drawer 1. The drawer 1 is open. In it, you see nothing."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to put a clean dishsponge in drawer. I have found the dishsponge 3 on the countertop 1, cleaned it in the sinkbasin 1, and am now trying to put it in drawer 1."
+            }
+        ]
+    },
+    {
+        "task": "pick_heat_then_place",
+        "example": [
+            {
+                "role": "user",
+                "content": "You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: heat some apple and put it in sidetable."
+            },
+            {
+                "role": "gpt",
+                "content": "Guideline: When your task involves heating an object and placing it on a specific receptacle, first identify the location of the object, then take it, heat it using an appropriate appliance like a microwave, and finally place it on the specified receptacle. The action workflows are:\n\n1. Go to the object's location\n2. Take the object\n3. Heat the object using a microwave or other suitable appliance\n4. Go to the receptacle\n5. Put the heated object in/on the receptacle."
+            },
+            {
+                "role": "user",
+                "content": "Thought: I need to locate an apple to heat up. The sink basin is a common place for fresh produce, so I should check there first.\nAction: go to sinkbasin 1\nObservation: On the sinkbasin 1, you see an apple 1 and a dishsponge 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to heat an apple and put it in sidetable. I have checked the sinkbasin 1 and found an apple 1 there."
+            },
+            {
+                "role": "user",
+                "content": "Thought: There's an apple here on the sink basin. I'll need to pick it up to proceed with heating it.\nAction: take apple 1 from sinkbasin 1\nObservation: You pick up the apple 1 from the sinkbasin 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to heat an apple and put it in sidetable. I have found an apple 1 in sinkbasin 1 and have picked it up. Next, I will try to heat the apple using one of the available appliances."
+            },
+            {
+                "role": "user",
+                "content": "Thought: To heat the apple, I should use the microwave. I'll go to the microwave to do this.\nAction: go to microwave 1\nObservation: The microwave 1 is closed."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to heat an apple and put it in sidetable. I have found an apple 1 in sinkbasin 1, but have not yet heated it or put it in sidetable. I go to the microwave 1 to heat the apple."
+            },
+            {
+                "role": "user",
+                "content": "Thought: The microwave is closed, but I need to heat the apple. I'll open the microwave, place the apple inside, and use the appropriate settings to heat it.\nAction: heat apple 1 with microwave 1\nObservation: You heat the apple 1 using the microwave 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to heat an apple and put it in sidetable. I have found an apple 1 in sinkbasin 1, picked it up, and heated it using microwave 1. I need to put the heated apple in sidetable 1."
+            },
+            {
+                "role": "user",
+                "content": "Thought: Now that the apple is heated, I need to place it on the side table as instructed. I'll head over to the side table.\nAction: go to sidetable 1\nObservation: On the sidetable 1, you see a dishsponge 2 and a tomato 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: I am in the process of completing a task to heat an apple and place it on the sidetable. I have located the apple on the sinkbasin, picked it up, heated it in the microwave, and am now en route to the sidetable to place it there."
+            }
+        ]
+    },
+    {
+        "task": "pick_cool_then_place",
+        "example": [
+            {
+                "role": "user",
+                "content": "You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: cool some tomato and put it in countertop."
+            },
+            {
+                "role": "gpt",
+                "content": "Guideline: When your goal is to cool a tomato and place it on a countertop, first locate the tomato by checking nearby objects, then pick it up, cool it using a refrigerator (if necessary), and finally place it on an available countertop. The action workflows are:\n\n1. Go to the location of the tomato.\n2. Take the tomato when found.\n3. Cool the tomato using a refrigerator, if necessary.\n4. Go to an available countertop.\n5. Place the tomato on the countertop."
+            },
+            {
+                "role": "user",
+                "content": "Thought: I need to locate a tomato to cool. The task description doesn't specify where the tomato is, so I should look around the room for it.\nAction: go to diningtable 1\nObservation: On the diningtable 1, you see a bowl 2, a bowl 1, a bread 1, a butterknife 2, a cup 2, a houseplant 1, a lettuce 1, a peppershaker 2, a soapbottle 2, a spatula 1, a spoon 2, a statue 2, and a tomato 2."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to cool a tomato and put it on countertop. I have found the tomato 2 on the diningtable 1."
+            },
+            {
+                "role": "user",
+                "content": "Thought: I have arrived at the dining table. Now I should look for a tomato here.\nAction: take tomato 2 from diningtable 1\nObservation: You pick up the tomato 2 from the diningtable 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to cool a tomato and put it on the countertop. I have found the tomato 2 on the diningtable 1 and picked it up."
+            },
+            {
+                "role": "user",
+                "content": "Thought: I have the tomato. The next step is to cool it, which typically involves a refrigerator. I should go to the fridge.\nAction: go to fridge 1\nObservation: The fridge 1 is closed."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to cool a tomato and put it on the countertop. I have found the tomato on the diningtable 1 and have picked it up. My next step is to go to the fridge 1 to cool the tomato."
+            },
+            {
+                "role": "user",
+                "content": "Thought: The fridge is closed. I can now use it to cool the tomato. I should perform the action of cooling the tomato with the fridge.\nAction: cool tomato 2 with fridge 1\nObservation: You cool the tomato 2 using the fridge 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to cool a tomato and put it on the countertop. I have found the tomato on the diningtable, picked it up, and am now trying to cool it in the fridge."
+            },
+            {
+                "role": "user",
+                "content": "Thought: The tomato is now cooled. I need to place it on a countertop as per the task instructions. I should find an available countertop.\nAction: go to countertop 1\nObservation: On the countertop 1, you see a potato 1, and a tomato 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to cool a tomato and put it in countertop. I have found the tomato (2) on diningtable 1 and cooled it in the fridge 1. Now, I need to put it in countertop 1."
+            }
+        ]
+    },
+    {
+        "task": "look_at_obj",
+        "example": [
+            {
+                "role": "user",
+                "content": "You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, and a garbagecan 1.\n\nYour task is to: look at pillow under the desklamp."
+            },
+            {
+                "role": "gpt",
+                "content": "Guideline: When the goal is to examine an object using a specific receptacle (like a desklamp), first identify the location of the object, then go to the location of the receptacle, and finally use the receptacle to examine the object. The action workflows are:\n\n1. Identify object's location and take it.\n2. Go to the location of the receptacle.\n3. Use the receptacle to examine the object"
+            },
+            {
+                "role": "user",
+                "content": "Thought: The task is to look at a pillow under the desklamp. First, I need to locate a pillow that I can place under the desklamp on the desk.\nAction: go to bed 1\nObservation: On the bed 1, you see a book 2, a laptop 2, a laptop 1, a pillow 3, a pillow 2, and a pillow 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to look at a pillow under the desklamp. I have found the pillow 1 that can be placed under the desklamp on the desk. I am currently checking the objects in the room to find the pillow."
+            },
+            {
+                "role": "user",
+                "content": "Thought: Now that I'm at bed 1, I should identify a pillow that I can take to the desk. Pillow 3 seems like a suitable choice since it's not specified which pillow to use.\nAction: take pillow 3 from bed 1\nObservation: You pick up the pillow 3 from the bed 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to look at a pillow under the desklamp. I have identified a pillow (3) that I can take from bed 1."
+            },
+            {
+                "role": "user",
+                "content": "Thought: With pillow 3 in hand, I need to move to the desk where the desklamp is located to complete the task.\nAction: go to desk 1\nObservation: On the desk 1, you see a alarmclock 3, a alarmclock 2, a alarmclock 1, a cd 1, a desklamp 1, a keychain 2, and a laptop 3."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to look at a pillow under the desklamp. I have identified a pillow (3) that I can take from bed 1, and have moved to the desk 1 where the desklamp 1 is located."
+            },
+            {
+                "role": "user",
+                "content": "Thought: I'm at the desk now. Before I can look at the pillow under the desklamp, I need to ensure the desklamp is turned on to provide light.\nAction: use desklamp 1\nObservation: You turn on the desklamp 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to look at a pillow under the desklamp. I have identified a pillow (3) that I can take from bed 1, and have moved to the desk 1 where the desklamp 1 is located. I have turned on the desklamp 1 to provide sufficient light."
+            }
+        ]
+    },
+    {
+        "task": "pick_two_obj",
+        "example": [
+            {
+                "role": "user",
+                "content": "You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a coffeetable 2, a coffeetable 1, a garbagecan 1, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sofa 1, and a tvstand 1.\n\nYour task is to: put two remotecontrol in armchair.",
+                "state": "Thought: To complete the task, I need to find two remote controls and put them in one of the armchairs. I should check the shelves and the coffee tables first as remote controls are often found there."
+            },
+            {
+                "role": "gpt",
+                "content": "Guideline: When the task is to put two remote controls in an armchair, first locate the remote controls by checking common areas like the sofa and coffee table, then pick them up, and finally place them in the armchair. The action workflows are:\n\n1. Go to the location of the first remote control (e.g., sofa).\n2. Take the first remote control.\n3. Go to the location of the second remote control (e.g., coffee table).\n4. Take the second remote control.\n5. Go to the armchair.\n6. Place both remote controls in the armchair."
+            },
+            {
+                "role": "user",
+                "content": "Thought: I need to locate and collect two remote controls to place in an armchair. The first place to check for a remote control is typically around seating areas, such as sofas.\nAction: go to sofa 1\nObservation: On the sofa 1, you see a creditcard 3, a keychain 2, a keychain 1, a laptop 2, a pillow 1, and a remotecontrol 4."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to put two remote controls in an armchair. I have found one remote control on the sofa 1."
+            },
+            {
+                "role": "user",
+                "content": "Thought: I've found a remote control on the sofa. I should pick it up to place it in the armchair later.\nAction: take remotecontrol 4 from sofa 1\nObservation: You pick up the remotecontrol 4 from the sofa 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to put two remote controls in an armchair. I have found one remote control on sofa 1 and picked it up. I need to find another remote control to complete the task."
+            },
+            {
+                "role": "user",
+                "content": "Thought: I have one remote control; I need one more. The coffee table is another common place where remote controls are often placed.\nAction: go to coffeetable 1\nObservation: On the coffeetable 1, you see a houseplant 1, a remotecontrol 3, a remotecontrol 2, a vase 3, and a watch 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to put two remote controls in an armchair. I have found one remote control on sofa 1 and picked it up. I am now searching for the second remote control, which is likely to be found on the coffee table."
+            },
+            {
+                "role": "user",
+                "content": "Thought: There are two remote controls here. I'll take one of them to complete the task of placing two remote controls in an armchair.\nAction: take remotecontrol 3 from coffeetable 1\nObservation: You pick up the remotecontrol 3 from the coffeetable 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to put two remote controls in an armchair. I have found one remote control on sofa 1 and picked it up. I have also found another remote control on the coffee table and picked it up. I am now on my way to the armchair to place both remote controls."
+            },
+            {
+                "role": "user",
+                "content": "Thought: With both remote controls in hand, I should now find an armchair to place them in.\nAction: go to armchair 1\nObservation: On the armchair 1, you see nothing."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to put two remote controls in an armchair. I have found one remote control each from sofa 1 and coffeetable 1, and have picked them up. I am now on my way to the armchair to place both remote controls."
+            },
+            {
+                "role": "user",
+                "content": "Thought: I'll place the first remote control in the armchair.\nAction: put remotecontrol 4 in/on armchair 1\nObservation: You put the remotecontrol 4 in/on the armchair 1."
+            },
+            {
+                "role": "gpt",
+                "content": "SUMMARIZATION: My task is to put two remote controls in an armchair. I have found one remote control each from sofa 1 and coffeetable 1, and have placed one remote control in armchair 1. I still need to place the second remote control in an armchair."
+            }
+        ]
+    }
+]
