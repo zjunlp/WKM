@@ -1,0 +1,19 @@
+{
+    "task": {
+        "task_class": "SciWorldTask"
+    },
+    "env_config": {
+        "env_class": "SciWorldEnv",
+        "instruction_path": "eval_agent/prompt/instructions/sciworld_inst.txt",
+        "instruction_ag_path": "eval_agent/prompt/instructions/sciworld_inst_ag.txt",
+        "instruction_wm_path": "eval_agent/prompt/instructions/sciworld_inst_wm.txt",
+        "env_jar_path": "envs/scienceworld/scienceworld.jar",
+        "icl_path": "eval_agent/prompt/icl_examples/sciworld_icl.json",
+        "icl_wm_path": "eval_agent/prompt/icl_examples/sciworld_icl.json",
+        "icl_ag_path": "eval_agent/prompt/icl_examples/sciworld_icl.json",
+        "icl_format": "conversation",
+        "max_steps": 10,
+        "is_icl": false,
+        "document_path": "../../data/retrieval/sciworld_state_action_pair.json"
+    }
+}

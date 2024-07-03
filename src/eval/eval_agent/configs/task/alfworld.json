@@ -1,0 +1,19 @@
+{
+    "task": {
+        "task_class": "AlfWorldTask",
+        "filepath": "eval_agent/data"
+    },
+    "env_config": {
+        "env_class": "AlfWorldEnv",
+        "instruction_path": "eval_agent/prompt/instructions/alfworld_inst.txt",
+        "instruction_ag_path": "eval_agent/prompt/instructions/alfworld_inst_ag.txt",
+        "instruction_wm_path": "eval_agent/prompt/instructions/alfworld_inst_wm.txt",
+        "icl_path": "eval_agent/prompt/icl_examples/alfworld_icl.json",
+        "icl_ag_path": "eval_agent/prompt/icl_examples/alfworld_icl_ag.json",
+        "icl_wm_path": "eval_agent/prompt/icl_examples/alfworld_icl_wm.json",
+        "icl_format": "conversation",
+        "max_steps": 40,
+        "is_icl": false,
+        "document_path": "../../data/retrieval/alfworld_state_action_pair.json"
+    }
+}

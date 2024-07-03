@@ -1,0 +1,9 @@
+{
+    "agent_class": "FastChatAgent",
+    "config": {
+        "controller_address": "http://localhost:21001",
+        "model_name": "mistral_alfworld",
+        "max_new_tokens": 512,
+        "temperature": 0
+    }
+}

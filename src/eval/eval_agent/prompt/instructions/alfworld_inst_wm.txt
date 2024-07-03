@@ -1,0 +1,25 @@
+Interact with a household to solve a task. Imagine you are an intelligent agent in a household environment and your target is to generate Task Knowledge and State Knowledge of your history action to complete the task goal. At the beginning of your interactions, you will be given the detailed description of the current environment and your goal ,you need to give a Task Knowledge to guide to finish the task. 
+Task Knowledge is the guideline to help to finish the task and State Knowledge is the summarization of now state.
+Here are Task Knowledge examples for each task:
+'pick_and_place': 'Task Knowledge: When looking for an object, if you want to find a kitchen-related object like a spatula, you should start from the most possible locations. The action workflows are as follow:\n1)go to receptacle\n2)take object from receptacle\n3)go to the place to put the object\n4)put object in/on receptacle',
+'pick_clean_then_place': 'Task Knowledge: When pick an object, clean it and place, you should first go to the possible locations of the object, then take the object, clean it, and put it in the place. The action workflows are as follow:\n1)go to receptacle\n 2)take object from receptacle\n3)clean object with receptacle\n4)go to the place to put the object\n5)put object in/on receptacle',
+'pick_heat_then_place': 'Task Knowledge: When pick an object, heat it and place, you should first go to the possible locations of the object, then take the object, heat it with micorwave, and put it in the place. The action workflows are as follow:\n1)go to receptacle\n 2)take object from receptacle\n3)heat object with receptacle\n4)go to the place to put the object\n5)put object in/on receptacle',
+'pick_cool_then_place': 'Task Knowledge: When pick an object, cool it and place, you should first go to the possible locations of the object, then take the object, cool it with fridge, and put it in the place. The action workflows are as follow:\n1)go to receptacle\n 2)take object from receptacle\n3)cool object with receptacle\n4)go to the place to put the object\n5)put object in/on receptacle',
+'look_at_obj': 'Task Knowledge: When look at an object to find it, before you open receptacle, you should first go to the possible locations of the object, then open the receptacle to find the object. The action workflows are as follow:\n1)go to receptacle\n 2)open receptacle\n3)take object from receptacle\n4)close receptacle\n5)go to the place to put the object',
+'pick_two_obj': 'Task Knowledge: When pick two objects, you should pick object one by one, and put them in the place one by one. The action workflows are as follow:\n1)go to receptacle\n 2)take object from receptacle\n3)go to the place to put the object\n4)put object in/on receptacle'
+
+The available actions are:
+1. go to {recep}
+2. take {obj} from {recep}
+3. put {obj} in/on {recep}
+4. open {recep}
+5. close {recep}
+6. toggle {obj} {recep}
+7. clean {obj} with {recep}
+8. heat {obj} with {recep}
+9. cool {obj} with {recep}
+where {obj} and {recep} correspond to objects and receptacles and you can only carry one item at a time, so put the item you are carrying in the right place before picking up a new one..
+make sure the action flow in your Task Knowledge is available
+For each of your turn,you should give a State Knowledge include summarization of your the place you have searched, and your now state,if the Observation is 'Nothings happens',State Knowledge should analyze the fault in history(have found obj?have clean\cool\heat the obj?),else State Knowledge should generate a brief and general summarization of the current status
+Your Task Knowledge should use the following format,
+Task Knowledge: When .... you should (or should not)... The action workflows are:....
