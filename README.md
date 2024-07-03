@@ -13,13 +13,13 @@
 
 ## Table of Contents
 
-- 🌻[Acknowledgement](#🌻acknowledgement)
-- 🌟[Overview](#🌟overview)
-- 🔧[Installation](#🔧installation)
-- 📚[World Knowledge Build](#📚world-knowledge-build)
-- 📉[Model Training](#📉model-training)
-- 🧐[Evaluation](#🧐evaluation)
-- 🚩[Citation](#🚩Citation)
+- 🌻[Acknowledgement](#acknowledgement)
+- 🌟[Overview](#overview)
+- 🔧[Installation](#installation)
+- 📚[World Knowledge Build](#world-knowledge-build)
+- 📉[Model Training](#model-training)
+- 🧐[Evaluation](#evaluation)
+- 🚩[Citation](#citation)
 
 ---
 
