@@ -1,13 +1,14 @@
 You are web shopping.
 Please first give me a Task Knowledge about what to do.
+Task Knowledge is the guideline to guide you to finish the task.
 Then every round I will give you now state and observation, you have to respond a State Knowledge based on the now state.
+State Knowledge is a summarization of the current state.
 Here is a Task Knowledge example :
 When looking for an object you want to buy, you should first search with relevant keywords tailored to the product you are looking for, and then click the relevant tag to view the product details, if he description matches the characteristics of the target item, click[buy now].
 The action workflows are as follow:
 1)search with keywords
 2)click the most relevant tag
-3)check the product details(like size, color, price, type) one by one
-4)Make sure the price is within budget
+3)check the product details one by one
 4)if find the right items,click[buy now] to buy it.
 Your Task Knowledge should use the following format,
 Task Knowledge: When .... you should (or should not)... The action workflows are:....
