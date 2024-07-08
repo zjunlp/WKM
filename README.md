@@ -5,6 +5,8 @@
   <a href="https://arxiv.org/abs/2405.14205">📄arXiv</a> •
   <a href="https://www.zjukg.org/project/WKM/">🌐Web</a> •
     <a href="https://x.com/omarsar0/status/1793851075411296761">𝕏 Blog</a>
+    •
+    <a href="https://huggingface.co/collections/zjunlp/wkm-6684c611102213b6d8104f84">🤗 HF</a>
 </p>
 
 [![Awesome](https://awesome.re/badge.svg)](https://github.com/zjunlp/WKM) 
@@ -89,7 +91,7 @@ python state_base_build.py \
     --state_action_pair_path path/to/store/state_action/pair \
     --vector_cache_path path/to/store/vector/cache
 ```
-
+Our training data has been uploaded to [huggingface](https://huggingface.co/datasets/zjunlp/WKM-train-data).
 
 ## 📉Model Training
 
@@ -127,7 +129,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch \
 ## 🧐Evaluation
 
 
-To evaluate the task, you should first lanuch a local API server with fastchat.
+To evaluate the task, you should first lanuch a local API server with fastchat. Our lora model adapter weights can be downloaded from [here](https://huggingface.co/collections/zjunlp/wkm-6684c611102213b6d8104f84).
 ```sh
 cd .src/eval
 # agent_model api server
@@ -159,7 +161,7 @@ python -m eval_agent.eto_multi_main_probs \
 
 ## 🚩Citation
 
-Please cite our repository if you use AutoAct in your work. Thanks!
+Please cite our repository if you use WKM in your work. Thanks!
 
 ```bibtex
 @article{DBLP:journals/corr/abs-2405-14205,
@@ -191,7 +193,7 @@ Please cite our repository if you use AutoAct in your work. Thanks!
 
 ## 🎉Contributors
 
-<a href="https://github.com/zjunlp/AutoAct/graphs/contributors">
+<a href="https://github.com/zjunlp/WKM/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=zjunlp/WKM" /></a>
 
 We will offer long-term maintenance to fix bugs and solve issues. So if you have any problems, please put issues to us.
