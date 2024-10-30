@@ -53,9 +53,9 @@ def process_wm(file_path,output_path):
             pre_action = ""
             for i in range(0,len(convs)-1,2):
                 human_conv = (pre_action+'\n'+convs[i]["value"]).strip()
-                gpt_conv  = (convs[i]["state"]).strip()
+                gpt_conv  = (convs[i]["state_knowledge"]).strip()
                 if i ==0:
-                    gpt_conv = d["guideline"]
+                    gpt_conv = d["task_knowledge"]
                 pre_action = convs[i+1]["value"]
                 new_convs.append({"from":"human","value":human_conv})
                 new_convs.append({"from":"gpt","value":gpt_conv})
@@ -80,9 +80,9 @@ def process_ag(file_path,output_path):
             for i in range(2,len(convs)-1,2):
                 human_conv = convs[i]["value"]+'\n'
                 if i ==2 :
-                    human_conv += d["guideline"]
+                    human_conv += d["task_knowledge"]
                 else :
-                    human_conv += convs[i]["state"]
+                    human_conv += convs[i]["state_knowledge"]
                     None
                 human_conv = human_conv.strip()
                 gpt_conv  = convs[i+1]["value"].strip()
