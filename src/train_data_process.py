@@ -82,7 +82,7 @@ def process_ag(file_path,output_path):
                 if i ==2 :
                     human_conv += d["task_knowledge"]
                 else :
-                    human_conv += convs[i]["state_knowledge"]
+                    # human_conv += convs[i]["state_knowledge"]
                     None
                 human_conv = human_conv.strip()
                 gpt_conv  = convs[i+1]["value"].strip()
