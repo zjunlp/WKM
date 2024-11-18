@@ -20,7 +20,7 @@ def state_action_build(file_path,output_path):
         for d in data:
             pre_action = "look"
             for i in range(2,len(d["conversations"]),2):
-                state = d["conversations"][i]["state"]
+                state = d["conversations"][i]["state_knowledge"]
                 action = d["conversations"][i+1]["value"]
                 
                 action = action.split("Action: ")[1]
