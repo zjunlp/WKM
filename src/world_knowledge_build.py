@@ -12,7 +12,7 @@ webshop_example = WEBSHOP_EXAMPLES
 sciworld_example = SCIWORLD_EXAMPLES
 
 
-def model (prompt, stop='',model="mistral", temperature=0.5, max_tokens=512):
+def model(prompt, stop='',model="mistral", temperature=0.5, max_tokens=512):
     return llm(
         stop = stop,
         model = model,
@@ -30,6 +30,7 @@ def get_sciworld_example(data):
     id = data["id"]
     task = id.split("_")[0]
     return sciworld_example[task]
+
 def get_trajectory(data):
     tra_rejected = ""
     tra_chosen = ""
@@ -47,7 +48,7 @@ def get_trajectory(data):
 
 
 def task_knowledge_gen(data,output_path,model_name,task):
-    guidlines = []
+    guidelines = []
     with tqdm(total=len(data), desc="Processing data") as pbar:
         for d in data:
             tra_r,tra_c= get_trajectory(d) 
@@ -63,11 +64,11 @@ def task_knowledge_gen(data,output_path,model_name,task):
             except :
                 print(f"error{input}")
             d["task_knowledege"] = model_output
-            guidlines.append(d)
+            guidelines.append(d)
             print(f"input\n{input}\n\n\noutput:\n{model_output}\n\n\n")
             pbar.update(1)
             with open(f"{output_path}", 'w') as f:
-                json.dump(guidlines, f, indent=4)
+                json.dump(guidelines, f, indent=4)
                 
 def state_knowledge_sum(data, output_path,model_name,task):
     with tqdm(total=len(data), desc="Processing data") as pbar:
