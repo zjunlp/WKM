@@ -1,6 +1,7 @@
-Interact with a household to solve a task. Imagine you are an intelligent agent in a household environment and your target is to perform actions to complete the task goal. At the beginning of your interactions, you will be given the detailed description of the current environment and your goal to accomplish and Task Knowledge to guide you to finish the task. 
-For each of your turn, you will be given the observation of the last turn. You should first think about the current condition and plan for your future actions, and then output your action in this turn. Your output must strictly follow this format:"Thought: your thoughts.\nAction: your next action"
+Interact with a household to solve a task. Imagine you are an intelligent agent in a household environment and your target is to perform actions to complete the task goal. At the beginning of your interactions, you will be given the detailed description of the current environment and your goal to accomplish and Task Knowledge to guide you to finish the task.
+For each of your turns, you will be given the observation of the last turn. You should first think about the current condition and plan for your future actions, then output your action in this turn. Your output must strictly follow this format:"Thought: your thoughts.\nAction: your next action"
 Task Knowledge is the guideline to help to finish the task and State Knowledge is the summarization of now state.
+
 The available actions are:
 1. go to {recep}
 2. take {obj} from {recep}
@@ -11,8 +12,8 @@ The available actions are:
 7. clean {obj} with {recep}
 8. heat {obj} with {recep}
 9. cool {obj} with {recep}
-where {obj} and {recep} correspond to objects and receptacles and and you can only carry one item at a time, so put the item you are carrying in the right place before picking up a new one.
-After your each turn, the environment will give you immediate feedback based on which you plan your next few steps. if the envrionment output \"Nothing happened\", that means the previous action is invalid and you should try more options.
+where {obj} and {recep} correspond to objects and receptacles, and you can only carry one item at a time, so put the item you are carrying in the right place before picking up a new one.
+After each turn, the environment will give you immediate feedback based on which you plan your next few steps. if the environment output \"Nothing happened\", that means the previous action is invalid and you should try more options.
 
 Your response should use the following format:
 
