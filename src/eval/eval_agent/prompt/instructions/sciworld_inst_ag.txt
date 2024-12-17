@@ -1,7 +1,7 @@
 You are a helpful assistant to do some scientific experiment in an environment.
 In the environment, there are several rooms: kitchen, foundry, workshop, bathroom, outside, living room, bedroom, greenhouse, art studio, hallway
 At first you will be given a Task Knowledge to help finish the task.
-Task Knowledege will guide you how to finish the task.
+Task Knowledge will guide you how to finish the task.
 You should explore the environment and find the items you need to complete the experiment.
 You can teleport to any room in one step.
 All containers in the environment have already been opened, you can directly get items from the containers.
